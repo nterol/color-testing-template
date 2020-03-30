@@ -17,7 +17,9 @@ function memoryReducer(state, { type, payload }) {
                     Object.values(payload.palette)
                 )
             ) {
-                toast('This palette already exists !');
+                toast.error('🙁 This palette already exists !', {
+                    position: toast.POSITION.BOTTOM_CENTER,
+                });
                 return state;
             }
 
