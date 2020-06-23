@@ -8,18 +8,25 @@ import Template from './components/Template';
 import FormerPalette from './components/FormerPalette';
 import ColorPicker from './components/ColorPicker';
 import {
-    AppContainer,
     GLobalStyle,
-    SpacerNoRecursive,
+    // SpacerNoRecursive,
 } from './components/commons/commonStyles';
 
+import styles from './common.module.scss';
+
+console.log(styles);
+
 const RawApp = () => (
-    <SpacerNoRecursive>
-        <h1>COLOR COMPOSITION TESTING TEMPLATE</h1>
-        <Template />
-        <ColorPicker />
-        <FormerPalette />
-    </SpacerNoRecursive>
+    <div className={styles.container}>
+        <div style={{margin: "18px"}}>
+            <h1>COLOR COMPOSITION TESTING TEMPLATE</h1>
+            <Template />
+        </div>
+        <div>
+            <ColorPicker />
+            <FormerPalette />
+        </div>
+    </div>
 );
 
 export default function App() {
@@ -27,9 +34,7 @@ export default function App() {
         <PaletteProvider>
             <MemoryProvider>
                 <GLobalStyle />
-                <AppContainer>
-                    <RawApp />
-                </AppContainer>
+                <RawApp />
             </MemoryProvider>
         </PaletteProvider>
     );

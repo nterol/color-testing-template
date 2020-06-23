@@ -1,12 +1,12 @@
 import React from "react";
 
 import { usePalette } from "../../contexts/PaletteContext";
-import { TemplateContainer } from "./styles";
+import { Col } from "../commons/commonStyles";
 
 const Template = () => {
   const { color1, color2, color3, color4, spectrum1, spectrum2 } = usePalette();
   return (
-    <TemplateContainer>
+    <Col>
     <svg
       viewBox="0 0 1066.6667 640"
       xmlns="http://www.w3.org/2000/svg"
@@ -341,7 +341,7 @@ const Template = () => {
         </g>
       </g>
     </svg>
-    </TemplateContainer>
+    </Col>
   );
 };
 

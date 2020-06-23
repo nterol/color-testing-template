@@ -5,19 +5,19 @@ import { SaveButtonContainer } from '../styles';
 import Moji from '../../commons/Moji';
 
 function SaveButton({ title, palette }) {
-    const dispatchMemory = useDispatchMemory();
-    return (
-        <SaveButtonContainer
-            onClick={() =>
-                dispatchMemory({
-                    type: 'add palette',
-                    payload: { title, palette },
-                })
-            }
-        >
-            <Moji moji="💾" type="save this palette" />
-        </SaveButtonContainer>
-    );
+  const dispatchMemory = useDispatchMemory();
+  return (
+    <SaveButtonContainer
+      onClick={() =>
+        dispatchMemory({
+          type: 'add palette',
+          payload: { title, palette, createdAt: new Date() },
+        })
+      }
+    >
+      <Moji moji="💾" type="save this palette" />
+    </SaveButtonContainer>
+  );
 }
 
 export default SaveButton;
