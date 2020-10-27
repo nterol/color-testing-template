@@ -5,30 +5,28 @@ html {font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen
 `;
 
 export const Flex = styled.div`
-    display: flex;
+  display: flex;
 `;
 
 export const Row = styled(Flex)`
-    flex-direction: row;
+  flex-direction: row;
 `;
 
 export const Col = styled(Flex)`
-    flex-direction: column;
-`;
-
-export const AppContainer = styled(Col)`
-    margin: 0 5%;
+  flex-direction: column;
 `;
 
 export const ColorChartContainer = styled(Row)`
-    padding: 8px;
-    margin-right: 8px;
+  padding: 8px;
+  margin-right: 8px;
 `;
 
 export const SpacerNoRecursive = styled.div`
-    && > {
-        * + * {
-            margin-top: 16px;
-        }
+  margin: 0 16px 0 16px;
+
+  && > {
+    * + * {
+      margin-top: 16px;
     }
+  }
 `;

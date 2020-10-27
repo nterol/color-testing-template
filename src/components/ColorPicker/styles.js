@@ -6,7 +6,7 @@ export const ColorPickerContainer = styled.section`
 `
 
 export const ColorChartContainer = styled.div`
-    padding: 16px 64px;
+    
     justify-content: start;
     display: flex;
     & * + * {

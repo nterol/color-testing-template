@@ -25,17 +25,18 @@ function ColorPicker() {
                 <ColorChart
                     title={title}
                     setSelected={setSelected}
+                    selected={selected}
                     palette={palette}
                 />
+                <Suspense fallback={<div>loading color slider</div>}>
+                    {selected && (
+                        <ColorSlider
+                            selectedColor={selected}
+                            color={palette[selected]}
+                        />
+                    )}
+                </Suspense>
             </div>
-            <Suspense fallback={<div>loading color slider</div>}>
-                {selected && (
-                    <ColorSlider
-                        selectedColor={selected}
-                        color={palette[selected]}
-                    />
-                )}
-            </Suspense>
         </ColorPickerContainer>
     );
 }

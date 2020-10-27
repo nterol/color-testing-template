@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Moji = ({ moji, type }) => (
   <span role="img" aria-label={type}>
